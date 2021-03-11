@@ -3233,9 +3233,11 @@ private allKnownDevices() {
 }
 
 private fahrenheitToCelsiusRounded(temperature) {
+    if (temperature) {
     def tempCelsius = fahrenheitToCelsius(temperature)
     // Round to one decimal place
     return Math.round(tempCelsius * 10) / 10
+    }    
 }
 
 private celsiusToFahrenheitRounded(temperature) {
